@@ -7,7 +7,8 @@ const String userAvatar =
 const String backDrop =
     'https://cdn.eizo.de/typo3temp/fl_realurl_image/office-monitors-at-a-glance-27e.jpg';
 
-const Color kPrimaryColor = Color(0xff373D70);
+const Color kPrimaryColor = Color(0xff41AF60);
+const Color kBackColor1=Color(0xffE9F8EE);
 const Color kAccentColor = Color(0xffDA00FF);
 const Color kBackgroundColor = Color(0xff373D70);
 const Color kBackgroundDarkColor = Color(0xff191E47);

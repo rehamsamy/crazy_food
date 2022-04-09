@@ -1,3 +1,4 @@
+import 'package:crazy_food/screens/auth_screen/auth_screen.dart';
 import 'package:crazy_food/screens/home_screen/home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
@@ -14,6 +15,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Crazy Food',
       theme: ThemeData(primarySwatch: Colors.green),
       home: const HomeScreen(),

@@ -31,7 +31,7 @@ class AppText extends StatelessWidget {
       maxLines: maxLines,
       textAlign: centerText ? TextAlign.center : TextAlign.start,
       style: Theme.of(context).textTheme.subtitle1!.copyWith(
-          color: color ?? Colors.white,
+          color: color ?? Colors.black,
           fontSize: fontSize,
           fontWeight: fontWeight,
           fontFamily: fontFamily ?? 'Monaco',

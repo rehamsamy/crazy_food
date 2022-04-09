@@ -50,6 +50,10 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
+flutter_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/icon/icon.png"
 
   flutter_lints: ^1.0.0
 
@@ -57,7 +61,7 @@ dev_dependencies:
 flutter_native_splash:
   color: "#FFFFFF"
   image: assets/images/splash_image.png
-  #  background_image: "src/images/splash_bg.png"
+#  background_image: "src/images/splash_bg.png"
   android: true
   ios: true
   remove_alpha_ios: true
@@ -71,5 +75,5 @@ flutter:
   uses-material-design: true
   assets:
     - assets/images/
-    - assets/icons/
+    - assets/icon/
     - assets/json/
