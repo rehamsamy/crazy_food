@@ -17,7 +17,7 @@ class CategoryItem extends StatelessWidget {
             width: 100,
             decoration: BoxDecoration(color: kBackColor1,borderRadius: BorderRadius.circular(15),
             ),
-            child: Center(child: Image.asset('assets/icon/icon.png')),
+            child: Center(child: Image.asset('assets/images/dumy2.jpeg',fit: BoxFit.contain,width: 60,height: 60,)),
           ),
           SizedBox(height: 10,),
           AppText('text')
