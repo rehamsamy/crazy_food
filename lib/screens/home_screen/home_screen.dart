@@ -4,9 +4,11 @@ import 'package:crazy_food/screens/home_screen/components/discount_item.dart';
 import 'package:crazy_food/screens/home_screen/components/populat_item.dart';
 import 'package:crazy_food/widgets/app_text.dart';
 import 'package:crazy_food/widgets/app_text_field.dart';
+import 'package:crazy_food/widgets/bottom_nav.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:get/get.dart';
+import 'package:badges/badges.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -26,12 +28,13 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return  Container(
-      color: kPrimaryColor,
-      child: CustomScrollView(
+    return  Scaffold(
+      //backgroundColor:Colors.orangeAccent ,
+      //color: kPrimaryColor,
+      body: CustomScrollView(
         slivers: [
           SliverAppBar(
-            expandedHeight: 100,
+            expandedHeight: 70,
             pinned: true,
             floating: false,
             centerTitle: true,
@@ -56,7 +59,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 padding: EdgeInsets.all(8),
                 decoration: BoxDecoration(
                     color: Colors.white.withOpacity(0.7),
-                    borderRadius: BorderRadius.only(topRight: Radius.circular(15),topLeft:Radius.circular(15) )
+                    borderRadius: BorderRadius.only(topRight: Radius.circular(20),topLeft:Radius.circular(20) )
                 ),
                 child: Column(
                   children: [
@@ -117,9 +120,40 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
               )
             ]
-          ))
+          )),
         ],
       ),
+      bottomNavigationBar: BottomNav(),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      floatingActionButton: Stack(
+        children :[
+          Container(
+          width: 60,
+          height: 60,
+        decoration: BoxDecoration(
+          shape: BoxShape.circle
+              ,color: kPrimaryColor
+        ),
+          child: Padding(
+            padding: const EdgeInsets.all(4.0),
+            child: Card(
+              shape:RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(50),
+              ),
+              child:  Badge(
+                badgeContent: Text('3'),
+                toAnimate: true,
+                position: BadgePosition.topEnd(),
+                child: Icon(Icons.shopping_cart_outlined,color: kPrimaryColor),
+              )
+              //Icon(Icons.shopping_cart_outlined,color: kPrimaryColor,),
+            ),
+          ),
+        ),
+
+        ]
+      )
+
     );
   }
 
