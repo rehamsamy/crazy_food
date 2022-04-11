@@ -1,5 +1,5 @@
 Map<String, String> en = {
-  'app_name': 'MCQ',
+  'app_name': 'Crazy Food',
   'general_error': 'Some Thing Went Wrong',
   'home_tab': 'Home',
   'favourite_tab': 'Favourites',

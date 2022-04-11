@@ -22,6 +22,7 @@ class CustomTextFormField extends StatefulWidget {
   final IconData? suffixIcon;
   final IconData? prefixIcon;
   final Color? suffixIconColor;
+  final Color? prefixIconColor;
   final bool enabled;
   final List<String>? autoFillHints;
   final double? radius;
@@ -58,6 +59,7 @@ class CustomTextFormField extends StatefulWidget {
     this.suffixIconColor,
     this.horizontalPadding = 24,
     this.verticalPadding = 12,
+    this.prefixIconColor,
   }) : super(key: key);
 
   @override
@@ -128,7 +130,7 @@ class _CustomTextFormFieldState extends State<CustomTextFormField> {
               ? Icon(
                   widget.prefixIcon,
                   size: 20,
-                  color: kAccentColor,
+                  color: widget.prefixIconColor ?? kAccentColor,
                 )
               : null,
           suffixText: widget.suffixText ?? '',
