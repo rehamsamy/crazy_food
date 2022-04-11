@@ -16,7 +16,7 @@ class HomeTabController extends AppController {
     safeCallApi(
       controllerId: [avatarControllerId, bodyControllerId],
       callBody: () async {
-        // result = await Result.success('d');
+        // result = await Result.loading();
         result = Result.success('Theme.of(context)');
         change(result: result, controllerId: [avatarControllerId, bodyControllerId]);
       },
