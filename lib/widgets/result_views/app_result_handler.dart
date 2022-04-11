@@ -43,7 +43,7 @@ class AppResultHandler extends StatelessWidget {
               ),
             );
     } else {
-      return (appController.result is LoadingResult)
+      return (appController.result is LoadingResult && showLoading!)
           ? const LoadingView()
           : (appController.result is EmptyResult)
               ? const EmptyView()

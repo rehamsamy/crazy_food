@@ -5,7 +5,7 @@ Map<String, String> en = {
   'favourite_tab': 'Favourites',
   'notification_tab': 'Notifications',
   'settings_tab': 'Settings',
-  'categories': 'App Categories',
+  'categories': 'Categories',
   'name': 'Name',
   'email': 'Email',
   'birth_date': 'BirthDate',
