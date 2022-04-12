@@ -34,7 +34,7 @@ class AppText extends StatelessWidget {
           color: color ?? Colors.black,
           fontSize: fontSize,
           fontWeight: fontWeight,
-          fontFamily: fontFamily ?? 'Monaco',
+          fontFamily: fontFamily,
           decoration: lineThrough
               ? TextDecoration.lineThrough
               : underLine

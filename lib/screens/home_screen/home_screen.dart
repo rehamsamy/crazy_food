@@ -25,7 +25,7 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   void initState() {
     super.initState();
-    FlutterNativeSplash.remove();
+    // FlutterNativeSplash.remove();
     pageController = PageController(
       initialPage: selectedTabIndex,
       keepPage: true,
@@ -40,6 +40,8 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final bool showFab = MediaQuery.of(context).viewInsets.bottom == 0.0;
+
     return Scaffold(
       //backgroundColor:Colors.orangeAccent ,
       //color: kPrimaryColor,
@@ -92,35 +94,36 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-      floatingActionButton: Container(
-        decoration: BoxDecoration(shape: BoxShape.circle, color: kPrimaryColor),
-        child: Padding(
-          padding: const EdgeInsets.all(4.0),
-          child: Card(
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(50),
-            ),
-            child: Badge(
-              badgeContent: AppText(
-                '3',
-                color: Colors.white,
-              ),
-              toAnimate: true,
-              position: BadgePosition.topEnd(),
+      floatingActionButton: !showFab
+          ? null
+          : Container(
+              decoration: BoxDecoration(shape: BoxShape.circle, color: kPrimaryColor),
               child: Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Icon(
-                  Icons.shopping_cart_outlined,
-                  color: kPrimaryColor,
+                padding: const EdgeInsets.all(4.0),
+                child: Card(
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(50),
+                  ),
+                  child: Badge(
+                    badgeContent: AppText(
+                      '3',
+                      color: Colors.white,
+                    ),
+                    toAnimate: true,
+                    position: BadgePosition.topEnd(top: -10),
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Icon(
+                        Icons.shopping_cart_outlined,
+                        color: kPrimaryColor,
+                      ),
+                    ),
+                  ),
                 ),
               ),
             ),
-          ),
-        ),
-      ),
     );
   }
-
 
   handleIndexChanged(int index) {
     selectedTabIndex = index;
@@ -159,5 +162,4 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
     );
   }
-
 }

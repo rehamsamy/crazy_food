@@ -3,8 +3,6 @@ import 'package:crazy_food/helper/result.dart';
 import 'app_controller.dart';
 
 class CategoryController extends AppController {
-  static String categoryControllerId = 'categoryControllerId';
-
   @override
   onInit() {
     super.onInit();
@@ -13,11 +11,11 @@ class CategoryController extends AppController {
 
   _loadData() async {
     safeCallApi(
-      controllerId: [categoryControllerId],
       callBody: () async {
-        // result = await Result.loading();
-        result = Result.success('Theme.of(context)');
-        change(result: result, controllerId: [categoryControllerId]);
+        result = await Result.loading();
+        await Future.delayed(Duration(seconds: 2));
+        result = Result.success(true);
+        change(result: result);
       },
     );
   }

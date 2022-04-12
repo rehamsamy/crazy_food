@@ -33,7 +33,7 @@ class CategoryItem extends StatelessWidget {
           ),
           Padding(
             padding: const EdgeInsets.all(8.0),
-            child: AppText('Category Name', maxLines: 1),
+            child: AppText('Meat', maxLines: 1),
           ),
         ],
       ),
