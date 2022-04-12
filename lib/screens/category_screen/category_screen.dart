@@ -1,6 +1,8 @@
+import 'package:badges/badges.dart';
 import 'package:crazy_food/controller/category_controller.dart';
 import 'package:crazy_food/helper/constants.dart';
 import 'package:crazy_food/helper/result.dart';
+import 'package:crazy_food/screens/bottom_nav.dart';
 import 'package:crazy_food/screens/home_screen/tabs/home_tab/components/category_item.dart';
 import 'package:crazy_food/widgets/app_text.dart';
 import 'package:crazy_food/widgets/result_views/app_result_handler.dart';
@@ -63,8 +65,6 @@ class CategoryScreen extends StatelessWidget {
                             ),
                               itemCount:15,itemBuilder: (_,index)=>CategoryItem(),)
                         ),
-
-
                   ),
                 ),
               ),
@@ -72,6 +72,34 @@ class CategoryScreen extends StatelessWidget {
           ),
         ),
 
+      ),
+      bottomNavigationBar: BottomNavigation(),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      floatingActionButton: Container(
+        decoration: BoxDecoration(shape: BoxShape.circle, color: kPrimaryColor),
+        child: Padding(
+          padding: const EdgeInsets.all(4.0),
+          child: Card(
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(50),
+            ),
+            child: Badge(
+              badgeContent: AppText(
+                '3',
+                color: Colors.white,
+              ),
+              toAnimate: true,
+              position: BadgePosition.topEnd(),
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Icon(
+                  Icons.shopping_cart_outlined,
+                  color: kPrimaryColor,
+                ),
+              ),
+            ),
+          ),
+        ),
       ),
     );
   }
