@@ -121,6 +121,7 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 
+
   handleIndexChanged(int index) {
     selectedTabIndex = index;
     pageController.jumpToPage(index);
@@ -158,4 +159,5 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
     );
   }
+
 }

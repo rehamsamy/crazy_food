@@ -1,6 +1,7 @@
 import 'package:crazy_food/controller/home_tab_controller.dart';
 import 'package:crazy_food/helper/constants.dart';
 import 'package:crazy_food/helper/result.dart';
+import 'package:crazy_food/screens/category_screen/category_screen.dart';
 import 'package:crazy_food/screens/home_screen/tabs/home_tab/components/home_loading.dart';
 import 'package:crazy_food/screens/home_screen/tabs/home_tab/components/popular_item.dart';
 import 'package:crazy_food/widgets/app_cached_image.dart';
@@ -120,9 +121,13 @@ class _HomeTabState extends State<HomeTab> with AutomaticKeepAliveClientMixin {
                                         fontWeight: FontWeight.bold,
                                         color: Colors.black,
                                       ),
-                                      trailing: AppText(
-                                        'see_all'.tr,
-                                        color: Colors.black,
+                                      trailing: 
+                                      InkWell(
+                                        onTap: ()=> Get.to(() => CategoryScreen()),
+                                        child: AppText(
+                                          'see_all'.tr,
+                                          color: Colors.black,
+                                        ),
                                       ),
                                     ),
                                     homeTabController.result is LoadingResult
