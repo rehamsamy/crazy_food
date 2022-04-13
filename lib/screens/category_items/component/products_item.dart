@@ -53,7 +53,6 @@ class _ProductsItemState extends State<ProductsItem> {
                 ),
               ],
             ),
-
               Positioned(
                   bottom: 1,
                   right: 1,
