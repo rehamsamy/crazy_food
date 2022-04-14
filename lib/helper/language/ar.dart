@@ -27,5 +27,7 @@ Map<String, String> ar = {
   'reset_password': 'استعاده كلمه المرور',
   'reset_password_desc': 'من فضلك ادخل البريد الالكتروني لاستعاده كلمه المرور',
   'level': 'مستوي',
-  'next': 'التالي'
+  'next': 'التالي',
+  'order_message':'اطلب اي منتج للحصول علي الخصم',
+  'order_now':'اطلب الان'
 };

@@ -9,6 +9,7 @@ import 'package:crazy_food/widgets/result_views/app_result_handler.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import 'component/category_item_loading.dart';
 import 'component/products_item.dart';
 
 class CategoryItemsScreen extends StatelessWidget {
@@ -58,7 +59,7 @@ class CategoryItemsScreen extends StatelessWidget {
                           mainAxisExtent: ProductsItem.height),
                       itemCount: categoryItemController.result is LoadingResult ? 12 : 20,
                       itemBuilder: (_, index) =>
-                      categoryItemController.result is LoadingResult ? CategoryLoading() : ProductsItem(),
+                      categoryItemController.result is LoadingResult ? CategoryItemLoading() : ProductsItem(),
                     ),
                   ),
                 ),

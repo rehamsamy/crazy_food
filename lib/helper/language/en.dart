@@ -27,5 +27,7 @@ Map<String, String> en = {
   'reset_password':'Reset Password',
   'reset_password_desc':'enter your email to reset password',
   'level':'Level',
-  'next':'Next'
+  'next':'Next',
+  'order_message':'Order any food from app to get the discount',
+  'order_now':'Order Now'
 };

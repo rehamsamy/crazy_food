@@ -22,35 +22,27 @@ class _ProductsItemState extends State<ProductsItem> {
       height: ProductsItem.height,
       child: Container(
             decoration: BoxDecoration(
-              color: kPrimaryColor.withOpacity(0.2),
+              color: Colors.white,
               borderRadius: BorderRadius.circular(8.0),
             ),
         child: Stack(
+          alignment: Alignment.center,
           children: [
             Column(
-              mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 Padding(
-                    padding: const EdgeInsets.all(8.0),
+                    padding: const EdgeInsets.all(10.0),
                     child: AppCashedImage(
                       imageUrl: 'https://cdn.britannica.com/27/218927-050-E99E1D46/Lychee-fruit-tree-plant.jpg',
-                      height: 90,
-                      width: 90,
-                      fit: BoxFit.contain,
+                      height: 100,
+                      width: MediaQuery.of(context).size.width,
+                      fit: BoxFit.cover,
                     ),
                   ),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: AppText('Meat', maxLines: 1),
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: AppText('price', maxLines: 1),
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: AppText('25\$', maxLines: 1,color: kPrimaryColor,fontWeight: FontWeight.bold,),
-                ),
+                AppText('Meat new food', maxLines: 1,fontSize: 20,fontWeight: FontWeight.bold,),
+                AppText('price', maxLines: 1,fontSize: 16,),
+                AppText('25\$', maxLines: 1,color: kPrimaryColor,fontWeight: FontWeight.bold,
+                    fontSize: 16,),
               ],
             ),
               Positioned(
