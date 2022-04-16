@@ -43,11 +43,11 @@ class CategoryItemsScreen extends StatelessWidget {
                   ),
                 ),
                 child: Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 8.0, vertical: 18.0),
+                  padding: const EdgeInsets.symmetric(horizontal: 8.0, vertical: 12.0),
                   child: Card(
                     clipBehavior: Clip.antiAliasWithSaveLayer,
                     shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(8),
+                      borderRadius: BorderRadius.circular(15),
                     ),
                     elevation: 8.0,
                     color: Colors.white,

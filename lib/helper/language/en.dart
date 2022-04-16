@@ -29,5 +29,6 @@ Map<String, String> en = {
   'level':'Level',
   'next':'Next',
   'order_message':'Order any food from app to get the discount',
-  'order_now':'Order Now'
+  'order_now':'Order Now',
+  'order':'Order'
 };

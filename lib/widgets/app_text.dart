@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class AppText extends StatelessWidget {
@@ -10,6 +11,7 @@ class AppText extends StatelessWidget {
   final FontWeight fontWeight;
   final bool lineThrough;
   final bool underLine;
+  final TextOverflow textOverflow;
 
   const AppText(
     this.text, {
@@ -21,6 +23,7 @@ class AppText extends StatelessWidget {
     this.fontFamily,
     this.lineThrough = false,
     this.underLine = false,
+        this.textOverflow=TextOverflow.visible,
     Key? key,
   }) : super(key: key);
 

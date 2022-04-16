@@ -29,5 +29,6 @@ Map<String, String> ar = {
   'level': 'مستوي',
   'next': 'التالي',
   'order_message':'اطلب اي منتج للحصول علي الخصم',
-  'order_now':'اطلب الان'
+  'order_now':'اطلب الان',
+  'order':'الطلب'
 };
