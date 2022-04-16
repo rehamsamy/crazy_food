@@ -1,5 +1,6 @@
 import 'package:crazy_food/helper/constants.dart';
 import 'package:crazy_food/screens/home_screen/tabs/orders_tab/components/order_item.dart';
+import 'package:crazy_food/widgets/app_buttons/app_elevated_button.dart';
 import 'package:crazy_food/widgets/app_text.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -48,20 +49,36 @@ class _OrdersTabState extends State<OrdersTab> with AutomaticKeepAliveClientMixi
                         children: [
                           SizedBox(height: 50,child: AppBar(
                             bottom: TabBar(
+                              isScrollable: true,
                               tabs: [
-                                Tab(
-                                  icon: Icon(Icons.directions_bike),
+                                AppElevatedButton(text: 'All Order',onPressed: (){},
+                                  backgroundColor: Colors.grey.shade100,textColor: Colors.black,
                                 ),
-                                Tab(
-                                  icon: Icon(Icons.directions_bike),
+                                AppElevatedButton(text: 'Processing',onPressed: (){},
+                                  backgroundColor: Colors.grey.shade100,textColor: Colors.black,
                                 ),
-                                Tab(
-                                  icon: Icon(Icons.directions_bike),
+                                AppElevatedButton(text: 'Pending',onPressed: (){},
+                                  backgroundColor: Colors.grey.shade100,textColor: Colors.black,
                                 ),
-                                Tab(
-                                  icon: Icon(Icons.directions_bike),
-                                ),
-                                
+                                AppElevatedButton(text: 'Processing',onPressed: (){},
+                                  backgroundColor: Colors.grey.shade100,textColor: Colors.black,
+                                )
+                            //     Tab(
+                            //       child:   AppElevatedButton(text: 'Processing',onPressed: (){},
+                            //         backgroundColor: Colors.grey.shade100,textColor: Colors.black,
+                            //       ),
+                            // //   icon: Icon(Icons.email),
+                            //     ),
+                            //     Tab(
+                            //       icon: Icon(Icons.directions_bike),
+                            //     ),
+                            //     Tab(
+                            //       icon: Icon(Icons.directions_bike),
+                            //     ),
+                            //     Tab(
+                            //       icon: Icon(Icons.directions_bike),
+                            //     ),
+                            //     //
                               ],
                             ),
                           )),
