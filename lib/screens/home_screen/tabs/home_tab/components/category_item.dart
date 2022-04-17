@@ -1,5 +1,6 @@
 import 'package:crazy_food/helper/constants.dart';
 import 'package:crazy_food/helper/get_binding.dart';
+import 'package:crazy_food/product_details/product_detail_screen.dart';
 import 'package:crazy_food/screens/category_items/category_items_screen.dart';
 import 'package:crazy_food/widgets/app_cached_image.dart';
 import 'package:crazy_food/widgets/app_text.dart';
@@ -9,13 +10,12 @@ import 'package:get/get.dart';
 
 class CategoryItem extends StatelessWidget {
   const CategoryItem({Key? key}) : super(key: key);
-
   static double height = 120;
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: ()=>Get.to(()=>CategoryItemsScreen(),binding: GetBinding()),
+      onTap: ()=>Get.to(()=>ProductDetail(),binding: GetBinding()),
       child: SizedBox(
         height: height,
         child: Column(

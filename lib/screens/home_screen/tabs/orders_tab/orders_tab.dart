@@ -12,9 +12,12 @@ class OrdersTab extends StatefulWidget {
   State<OrdersTab> createState() => _OrdersTabState();
 }
 
-class _OrdersTabState extends State<OrdersTab> with AutomaticKeepAliveClientMixin {
+class _OrdersTabState extends State<OrdersTab> with AutomaticKeepAliveClientMixin,TickerProviderStateMixin {
+  late TabController _tabController;
+  int selectedTabIndex =0;
   @override
   Widget build(BuildContext context) {
+    _tabController = TabController(length: 4, vsync: this);
     super.build(context);
     return DefaultTabController(
       length: 4,
@@ -47,43 +50,42 @@ class _OrdersTabState extends State<OrdersTab> with AutomaticKeepAliveClientMixi
                   child:
                       Column(
                         children: [
-                          SizedBox(height: 50,child: AppBar(
-                            bottom: TabBar(
+                          SizedBox(height: 40,child: TabBar(
+                              controller: _tabController,
                               isScrollable: true,
+                              indicator:BoxDecoration(
+                                borderRadius: BorderRadius.circular(
+                                  10.0,
+                                ),
+                                color: kPrimaryColor,
+                              ),
+                              labelColor: Colors.white,
+                              unselectedLabelColor: Colors.black,
+                              onTap: (ind){
+                                setState(() {
+                                 // selectedTabIndex=ind;
+                                });
+                              },
                               tabs: [
-                                AppElevatedButton(text: 'All Order',onPressed: (){},
-                                  backgroundColor: Colors.grey.shade100,textColor: Colors.black,
+                                Tab(
+                                 text: 'All Order',
                                 ),
-                                AppElevatedButton(text: 'Processing',onPressed: (){},
-                                  backgroundColor: Colors.grey.shade100,textColor: Colors.black,
+                                Tab(
+                                    text: 'Processing'
                                 ),
-                                AppElevatedButton(text: 'Pending',onPressed: (){},
-                                  backgroundColor: Colors.grey.shade100,textColor: Colors.black,
+                                Tab(
+                                    text: 'Pending'
                                 ),
-                                AppElevatedButton(text: 'Processing',onPressed: (){},
-                                  backgroundColor: Colors.grey.shade100,textColor: Colors.black,
-                                )
-                            //     Tab(
-                            //       child:   AppElevatedButton(text: 'Processing',onPressed: (){},
-                            //         backgroundColor: Colors.grey.shade100,textColor: Colors.black,
-                            //       ),
-                            // //   icon: Icon(Icons.email),
-                            //     ),
-                            //     Tab(
-                            //       icon: Icon(Icons.directions_bike),
-                            //     ),
-                            //     Tab(
-                            //       icon: Icon(Icons.directions_bike),
-                            //     ),
-                            //     Tab(
-                            //       icon: Icon(Icons.directions_bike),
-                            //     ),
-                            //     //
+                                Tab(
+                                    text: 'Processing'
+                                ),
+                                //
                               ],
                             ),
-                          )),
+                          ),
                           Expanded(
-                            child: TabBarView(children: [
+                            child: TabBarView(
+                                controller:_tabController,children: [
                               ListView.builder(itemBuilder: (_,index)=>OrderItem(),itemCount: 10,),
                               AppText(''),
                               AppText(''),
